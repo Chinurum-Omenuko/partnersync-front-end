@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PartnerSync</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-[#00703C] p-4 flex justify-between items-center">
+        <div class="container flex items-center">
+            <img src="logo.png" alt="PartnerSync Logo" class="w-12 h-12">
+            <button class="sign-in-btn bg-[#EAC117] text-white px-4 py-2 rounded ml-auto" onclick="openSignInModal()">Sign In</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero bg-[#00703C] text-center py-20 text-white">
+        <div class="hero-content max-w-lg mx-auto">
+            <h1 class="text-4xl font-bold mb-4">PartnerSync</h1>
+            <p class="text-xl mb-6">Connecting Projects with Talent</p>
+            <button class="get-started-btn bg-[#EAC117] text-white px-6 py-3 rounded" onclick="openSignUpModal()">Get Started</button>
+
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features py-16 px-4 text-center">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="feature p-6 border rounded-lg shadow-md">
+                <img src="create_account_icon.png" alt="Create an Account" class="w-16 h-16 mx-auto mb-4">
+                <h3 class="text-2xl font-bold mb-2">Create an Account</h3>
+                <p>Sign up by identifying yourself as a Faculty Member or Industry Partner to tailor your experience.</p>
+            </div>
+            <div class="feature p-6 border rounded-lg shadow-md">
+                <img src="submit_request_icon.png" alt="Submit a Request" class="w-16 h-16 mx-auto mb-4">
+                <h3 class="text-2xl font-bold mb-2">Submit a Request</h3>
+                <p>Provide details about your project idea or area of interest to get started.</p>
+            </div>
+            <div class="feature p-6 border rounded-lg shadow-md">
+                <img src="explore_opportunities_icon.png" alt="Explore Collaboration Opportunities" class="w-16 h-16 mx-auto mb-4">
+                <h3 class="text-2xl font-bold mb-2">Explore Collaboration Opportunities</h3>
+                <p>Browse through partner organizations or courses at Algonquin College to find your ideal collaborators and start working together!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-8">
+        <div class="footer-content max-w-5xl mx-auto flex justify-between">
+            <div class="company-info">
+                <h4 class="text-lg font-bold mb-2">Company</h4>
+                <p><a href="https://www.algonquincollege.com/applied-research/" class="text-white">About Applied Research</a></p>
+                <p><a href="https://www.algonquincollege.com/" class="text-white">Algonquin College</a></p>
+            </div>
+            <div class="legal-info">
+                <h4 class="text-lg font-bold mb-2">Legal</h4>
+                <p><a href="#" class="text-white">Terms of Service</a></p>
+                <p><a href="#" class="text-white">Privacy policy</a></p>
+            </div>
+        </div>
+        <p class="text-center mt-8">&copy; 2024 PartnerSync. All rights reserved.</p>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div id="signInModal" class="modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="modal-content bg-white p-8 rounded-lg">
+            <span class="close text-black text-2xl cursor-pointer" onclick="closeSignInModal()">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Sign In</h2>
+            <form class="flex flex-col gap-4">
+                <input type="email" placeholder="Email" class="border p-2 rounded">
+                <input type="password" placeholder="Password" class="border p-2 rounded">
+                <button type="submit" class="bg-[#EAC117] text-white px-4 py-2 rounded">Sign In</button>
+            </form>
+            <p class="mt-4">New to PartnerSync? <a href="#" onclick="openSignUpModal()" class="text-blue-500">Sign up</a></p>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
