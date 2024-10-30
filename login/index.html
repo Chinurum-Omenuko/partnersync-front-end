@@ -10,36 +10,41 @@
     <!-- Header Section -->
     <header class="bg-[#00703C] p-4 flex justify-between items-center">
         <div class="container flex items-center">
-            <img src="logo.png" alt="PartnerSync Logo" class="w-12 h-12">
+            <img src="/images/white logo.svg" alt="PartnerSync Logo" class="h-16 w-auto md:h-24 lg:h-32 mb-4">
             <button class="sign-in-btn bg-[#EAC117] text-white px-4 py-2 rounded ml-auto" onclick="openSignInModal()">Sign In</button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero bg-[#00703C] text-center py-20 text-white">
-        <div class="hero-content max-w-lg mx-auto">
+    <section class="hero bg-[#00703C] text-center text-white relative overflow-hidden" style="min-height: 100vh;">
+        <!-- Hero Content -->
+        <div class="hero-content relative z-20 flex flex-col justify-center items-center h-full">
             <h1 class="text-4xl font-bold mb-4">PartnerSync</h1>
             <p class="text-xl mb-6">Connecting Projects with Talent</p>
             <button class="get-started-btn bg-[#EAC117] text-white px-6 py-3 rounded" onclick="openSignUpModal()">Get Started</button>
-
+        </div>
+    
+        <!-- Graphic Layer -->
+        <div class="graphic-layer absolute bottom-0 left-0 right-0 z-10">
+            <img src="/images/PartnerSync banner.svg" alt="Hero Banner Graphic" class="w-full h-auto">
         </div>
     </section>
-
+    
     <!-- Features Section -->
     <section class="features py-16 px-4 text-center">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="feature p-6 border rounded-lg shadow-md">
-                <img src="create_account_icon.png" alt="Create an Account" class="w-16 h-16 mx-auto mb-4">
+                <img src="/images/PartnerSync graphics-01.svg" alt="Create an Account" class="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 mx-auto mb-4">
                 <h3 class="text-2xl font-bold mb-2">Create an Account</h3>
                 <p>Sign up by identifying yourself as a Faculty Member or Industry Partner to tailor your experience.</p>
             </div>
             <div class="feature p-6 border rounded-lg shadow-md">
-                <img src="submit_request_icon.png" alt="Submit a Request" class="w-16 h-16 mx-auto mb-4">
+                <img src="/images/PartnerSync graphics-02.svg" alt="Submit a Request" class="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 mx-auto mb-4">
                 <h3 class="text-2xl font-bold mb-2">Submit a Request</h3>
                 <p>Provide details about your project idea or area of interest to get started.</p>
             </div>
             <div class="feature p-6 border rounded-lg shadow-md">
-                <img src="explore_opportunities_icon.png" alt="Explore Collaboration Opportunities" class="w-16 h-16 mx-auto mb-4">
+                <img src="/images/PartnerSync graphics-03.svg" alt="Explore Collaboration Opportunities" class="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 mx-auto mb-4">
                 <h3 class="text-2xl font-bold mb-2">Explore Collaboration Opportunities</h3>
                 <p>Browse through partner organizations or courses at Algonquin College to find your ideal collaborators and start working together!</p>
             </div>
@@ -48,23 +53,36 @@
 
     <!-- Footer Section -->
     <footer class="bg-black text-white py-8">
-        <div class="footer-content max-w-5xl mx-auto flex justify-between">
-            <div class="company-info">
-                <h4 class="text-lg font-bold mb-2">Company</h4>
-                <p><a href="https://www.algonquincollege.com/applied-research/" class="text-white">About Applied Research</a></p>
-                <p><a href="https://www.algonquincollege.com/" class="text-white">Algonquin College</a></p>
+        <div class="footer-content max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 px-4">
+            <!-- Company and Legal Information -->
+            <div class="info-section flex flex-col md:flex-row gap-8">
+                <!-- Company Information -->
+                <div class="company-info">
+                    <h4 class="text-lg font-bold mb-2">Company</h4>
+                    <p><a href="https://www.algonquincollege.com/applied-research/" class="text-white hover:text-gray-400">About Applied Research</a></p>
+                    <p><a href="https://www.algonquincollege.com/" class="text-white hover:text-gray-400">Algonquin College</a></p>
+                </div>
+    
+                <!-- Legal Information -->
+                <div class="legal-info mt-4 md:mt-0">
+                    <h4 class="text-lg font-bold mb-2">Legal</h4>
+                    <p><a href="#" class="text-white hover:text-gray-400">Terms of Service</a></p>
+                    <p><a href="#" class="text-white hover:text-gray-400">Privacy Policy</a></p>
+                </div>
             </div>
-            <div class="legal-info">
-                <h4 class="text-lg font-bold mb-2">Legal</h4>
-                <p><a href="#" class="text-white">Terms of Service</a></p>
-                <p><a href="#" class="text-white">Privacy policy</a></p>
+    
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="/images/white logo.svg" alt="PartnerSync Logo" class="h-16 w-auto">
             </div>
         </div>
+    
+        <!-- Copyright Information -->
         <p class="text-center mt-8">&copy; 2024 PartnerSync. All rights reserved.</p>
     </footer>
-
+    
     <!-- Sign In Modal -->
-    <div id="signInModal" class="modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div id="signInModal" class="modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden z-30">
         <div class="modal-content bg-white p-8 rounded-lg">
             <span class="close text-black text-2xl cursor-pointer" onclick="closeSignInModal()">&times;</span>
             <h2 class="text-2xl font-bold mb-4">Sign In</h2>

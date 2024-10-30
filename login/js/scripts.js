@@ -13,14 +13,10 @@ function closeSignInModal() {
 }
 
 function openSignUpModal() {
-    const signInModal = document.getElementById('signInModal');
-    if (signInModal) {
-        signInModal.classList.add('hidden');
-    }
+    closeSignInModal(); // Ensure other modals are closed
 
-    // Create the sign-up form elements dynamically to match the hi-fi design
     const signUpFormHtml = `
-        <div id="signUpModal" class="modal-content bg-white p-8 rounded-lg w-[90%] max-w-lg">
+        <div id="signUpModal" class="modal-content bg-white p-8 rounded-lg w-[90%] max-w-lg relative z-40">
             <span class="close text-black text-2xl cursor-pointer" onclick="closeSignUpModal()">&times;</span>
             <h2 class="text-2xl font-bold mb-4">Welcome to PartnerSync</h2>
             <p class="mb-4">Please select one of the groups that describe you</p>
@@ -39,7 +35,7 @@ function openSignUpModal() {
 
     const modalContainer = document.createElement('div');
     modalContainer.id = 'signUpModalContainer';
-    modalContainer.className = 'modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50';
+    modalContainer.className = 'modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-30';
     modalContainer.innerHTML = signUpFormHtml;
     document.body.appendChild(modalContainer);
 }
@@ -52,11 +48,11 @@ function closeSignUpModal() {
 }
 
 function openFacultyForm() {
-    closeSignUpModal();
+    closeSignUpModal(); // Ensure sign-up modal is closed before opening the faculty form
 
     // Create faculty sign-up form
     const facultyFormHtml = `
-        <div id="facultySignUpModal" class="modal-content bg-white p-8 rounded-lg w-[90%] max-w-lg">
+        <div id="facultySignUpModal" class="modal-content bg-white p-8 rounded-lg w-[90%] max-w-lg relative z-40">
             <span class="close text-black text-2xl cursor-pointer" onclick="closeFacultyForm()">&times;</span>
             <h2 class="text-2xl font-bold mb-4">Create your account (Faculty)</h2>
             <form class="flex flex-col gap-4">
@@ -71,7 +67,7 @@ function openFacultyForm() {
 
     const modalContainer = document.createElement('div');
     modalContainer.id = 'facultySignUpModalContainer';
-    modalContainer.className = 'modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50';
+    modalContainer.className = 'modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-30';
     modalContainer.innerHTML = facultyFormHtml;
     document.body.appendChild(modalContainer);
 }
@@ -84,11 +80,11 @@ function closeFacultyForm() {
 }
 
 function openPartnerForm() {
-    closeSignUpModal();
+    closeSignUpModal(); // Ensure sign-up modal is closed before opening the partner form
 
     // Create partner sign-up form
     const partnerFormHtml = `
-        <div id="partnerSignUpModal" class="modal-content bg-white p-8 rounded-lg w-[90%] max-w-lg">
+        <div id="partnerSignUpModal" class="modal-content bg-white p-8 rounded-lg w-[90%] max-w-lg relative z-40">
             <span class="close text-black text-2xl cursor-pointer" onclick="closePartnerForm()">&times;</span>
             <h2 class="text-2xl font-bold mb-4">Create your account (Partner)</h2>
             <form class="flex flex-col gap-4">
@@ -102,7 +98,7 @@ function openPartnerForm() {
 
     const modalContainer = document.createElement('div');
     modalContainer.id = 'partnerSignUpModalContainer';
-    modalContainer.className = 'modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50';
+    modalContainer.className = 'modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-30';
     modalContainer.innerHTML = partnerFormHtml;
     document.body.appendChild(modalContainer);
 }
@@ -113,3 +109,4 @@ function closePartnerForm() {
         partnerSignUpModal.remove();
     }
 }
+
