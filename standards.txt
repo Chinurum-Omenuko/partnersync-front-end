@@ -1,0 +1,4 @@
+Rules and standards:
+- Use vh and vw for width and height
+- use min and max widths when appropriate
+- have a maximum of 1 js file for each html
