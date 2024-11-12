@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMCjHp3T0c/s8mI4pMTVVqzHHbU+/E8A4jcnG1m" crossorigin="anonymous">
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="flex justify-between items-center bg-white px-4 ">
+        <div class="flex items-center">
+            <!-- Responsive logo size classes -->
+            <img src="/images/green-logo.svg" alt="PartnerSync Logo" class="h-10 w-auto sm:h-12 md:h-16 lg:h-20">
+        </div>
+        <div class="flex items-center space-x-4">
+            <!-- Notification Bell Icon -->
+            <button class="text-gray-600 text-xl">
+                <i class="fas fa-bell"></i>
+            </button>
+            <!-- Sign In Button (Visible on medium screens and up) -->
+            <button class="hidden md:inline bg-[#EAC117] text-white px-3 py-1 rounded" onclick="openSignInModal()">Sign In</button>
+            <!-- Hamburger Menu for Mobile -->
+            <button class="bg-[#EAC117] text-white px-3 py-1 rounded md:hidden" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobileMenu" class="md:hidden bg-white p-4 hidden ">
+        <ul class="space-y-3 text-center">
+            <li><a href="#" class="text-gray-700 font-semibold">Home</a></li>
+            <li><a href="#" class="text-gray-700 font-semibold">Courses</a></li>
+            <li><a href="#" class="text-gray-700 font-semibold">External Projects</a></li>
+            <li><a href="#" class="text-gray-700 font-semibold">Inbox</a></li>
+            <li><a href="#" class="text-gray-700 font-semibold">Expressed Interests</a></li>
+        </ul>
+        <button class="bg-[#EAC117] text-white px-4 py-2 rounded w-full mt-4" onclick="openSignInModal()">Sign In</button>
+    </nav>
+
+    <main class="p-6">
+        <!-- Dashboard Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <!-- Sidebar Navigation (Hidden on Mobile, Visible on Tablet and Up) -->
+            <aside class="bg-white p-6 rounded-lg text-center  lg:col-span-1 hidden md:block">
+                <img src="/images/dash-user-profile.jpg" alt="Profile Picture" class="w-24 h-24 mx-auto rounded-full mb-4">
+                <p class="text-gray-600">Position</p>
+                <h3 class="text-lg font-bold">Sarah Smith</h3>
+                <div class="my-5 border-t-2 border-green-700 border-b-2 py-4">
+                    <ul class="space-y-3">
+                        <li class="font-semibold"><a href="#" class="text-gray-700">Home</a></li>
+                        <li class="font-semibold"><a href="#" class="text-gray-700">Courses</a></li>
+                        <li class="font-semibold"><a href="#" class="text-gray-700">External Projects</a></li>
+                        <li class="font-semibold"><a href="#" class="text-gray-700">Inbox</a></li>
+                        <li class="font-semibold"><a href="#" class="text-gray-700">Expressed Interests</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content Section -->
+            <section class="bg-green-700 p-6 rounded-lg lg:col-span-4">
+                <h1 class="text-2xl md:text-3xl text-white font-bold mb-4">Welcome Home, Sarah</h1>
+
+                <!-- What's New & Profile Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- What's New Section -->
+                    <div class="col-span-1 md:col-span-2 lg:col-span-2 bg-white p-6 rounded-lg ">
+                        <h2 class="text-xl font-semibold mb-4">What's New</h2>
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet...</p>
+                    </div>
+
+                    <!-- Profile Card -->
+                    <div class="col-span-1 bg-white p-6 rounded-lg ">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-bold">Sarah Smith</h3>
+                            <img src="/images/dash-user-profile.jpg" alt="Profile Picture" class="w-14 h-14 rounded-full">
+                        </div>
+                        <div class="space-y-2">
+                            <p><span class="font-semibold">Course:</span> Applied Projects</p>
+                            <p><span class="font-semibold">Program:</span> Media Design</p>
+                            <p><span class="font-semibold">Email:</span> sarahsmith@companymail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Requests Section -->
+                <section class="mt-8">
+                    <h2 class="text-2xl font-bold text-white mb-4">My Requests</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Request Card 1 -->
+                        <div class="bg-white p-6 rounded-lg ">
+                            <h3 class="text-lg font-semibold">UX/UI Project</h3>
+                            <p class="text-gray-500 text-sm">Our IMD Level 4 class is seeking a UX/UI Project to take on.</p>
+                        </div>
+                        <!-- Request Card 2 -->
+                        <div class="bg-white p-6 rounded-lg ">
+                            <h3 class="text-lg font-semibold">Request Title</h3>
+                            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet...</p>
+                        </div>
+                        <!-- Request Card 3 -->
+                        <div class="bg-white p-6 rounded-lg ">
+                            <h3 class="text-lg font-semibold">Request Title</h3>
+                            <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet...</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
