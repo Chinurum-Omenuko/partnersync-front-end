@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Register your Course Section -->
+    <div class="bg-[#00703C] mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div class="bg-white mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <!-- Courses Heading -->
+            <div class="mb-6">
+                <h1 class="text-4xl font-bold mb-4">Courses</h1>
+                <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-green-700" />
+            </div>
+
+            <!-- Courses Table -->
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <thead>
+                        <tr class="bg-gray-100 border-b border-gray-200">
+                            <th class="px-6 py-3 text-left font-semibold text-gray-700">Name</th>
+                            <th class="px-6 py-3 text-left font-semibold text-gray-700">Program</th>
+                            <th class="px-6 py-3 text-left font-semibold text-gray-700">School/department</th>
+                            <th class="px-6 py-3 text-left font-semibold text-gray-700">Level</th>
+                            <th class="px-6 py-3 text-left font-semibold text-gray-700">Staff</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Row -->
+                        <tr class="border-b border-gray-200 cursor-pointer"
+                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                            <td class="px-6 py-4 text-gray-900">School/department</td>
+                            <td class="px-6 py-4 text-gray-900">4</td>
+                            <td class="px-6 py-4 text-gray-900">Staff</td>
+                        </tr>
+                        <!-- Duplicate rows for illustration -->
+                        <tr class="border-b border-gray-200 cursor-pointer"
+                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                            <td class="px-6 py-4 text-gray-900">School/department</td>
+                            <td class="px-6 py-4 text-gray-900">4</td>
+                            <td class="px-6 py-4 text-gray-900">Staff</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 cursor-pointer"
+                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                            <td class="px-6 py-4 text-gray-900">School/department</td>
+                            <td class="px-6 py-4 text-gray-900">4</td>
+                            <td class="px-6 py-4 text-gray-900">Staff</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 cursor-pointer"
+                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                            <td class="px-6 py-4 text-gray-900">School/department</td>
+                            <td class="px-6 py-4 text-gray-900">4</td>
+                            <td class="px-6 py-4 text-gray-900">Staff</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 cursor-pointer"
+                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                            <td class="px-6 py-4 text-gray-900">School/department</td>
+                            <td class="px-6 py-4 text-gray-900">4</td>
+                            <td class="px-6 py-4 text-gray-900">Staff</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 cursor-pointer"
+                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                            <td class="px-6 py-4 text-gray-900">School/department</td>
+                            <td class="px-6 py-4 text-gray-900">4</td>
+                            <td class="px-6 py-4 text-gray-900">Staff</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 cursor-pointer"
+                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                            <td class="px-6 py-4 text-gray-900">School/department</td>
+                            <td class="px-6 py-4 text-gray-900">4</td>
+                            <td class="px-6 py-4 text-gray-900">Staff</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 cursor-pointer"
+                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                            <td class="px-6 py-4 text-gray-900">School/department</td>
+                            <td class="px-6 py-4 text-gray-900">4</td>
+                            <td class="px-6 py-4 text-gray-900">Staff</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="fixed inset-0 hidden items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="bg-white p-6 rounded shadow-lg w-full max-w-7xl mx-auto h-3/4 overflow-y-auto">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold mb-4" id="modalTitle">Course Information</h2>
+                <span onclick="closeModal()" class="cursor-pointer text-gray-600 text-4xl">&times;</span>
+            </div>
+            <p id="modalContent">Here is the detailed information about the course.</p>
+        </div>
+    </div>
+    <!-- JavaScript for Modal -->
+    <script>
+        function openModal(name, program, skills, level, Term, Duration, staff) {
+            // Set the modal content dynamically
+            document.getElementById("modalTitle").textContent = `${name} - ${program}`;
+            document.getElementById("modalContent").innerHTML = `
+                <strong>Course Summary:</strong><br> ${program}<br>
+                <strong>Skill Set:</strong><br> ${skills}<br>
+                <strong>Program:</strong><br> ${program}<br>
+                <strong>Term:</strong><br> ${Term}<br>  
+                <strong>Level:</strong><br> ${level}<br>
+                <strong>Duration:</strong><br> ${Duration}<br>
+                <strong>Staff:</strong><br> ${staff}
+            `;
+            // Show the modal
+            document.getElementById("infoModal").classList.remove("hidden");
+            document.getElementById("infoModal").classList.add("flex");
+        }
+
+        function closeModal() {
+            document.getElementById("infoModal").classList.add("hidden");
+            document.getElementById("infoModal").classList.remove("flex");
+        }
+    </script>
+</body>
+
+</html>
