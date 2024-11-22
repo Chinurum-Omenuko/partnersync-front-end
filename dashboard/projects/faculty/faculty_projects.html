@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Projects</title>
+</head>
+<body class="bg-[#00703C] flex justify-center items-center min-h-screen">
+    <!-- Projects Section -->
+    <div class="max-w-4xl w-full mx-auto bg-white rounded-lg p-8 space-y-6">
+        <!-- Header -->
+        <div>
+            <h1 class="text-3xl font-bold">Projects</h1>
+            <hr class="mt-4 mb-6 border-t-2 border-green-400">
+        </div>
+
+        <!-- Dropdown -->
+        <div class="relative inline-block w-full md:w-auto">
+            <button class="bg-yellow-400 text-white font-semibold py-2 px-4 rounded inline-flex items-center w-full md:w-auto">
+                <span>Categories</span>
+                <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5.23 7.21a.75.75 0 011.06 0L10 10.92l3.71-3.71a.75.75 0 111.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 010-1.06z" />
+                </svg>
+            </button>
+            <!-- Dropdown Content -->
+            <div class="absolute mt-1 bg-white rounded-md shadow-lg w-full hidden">
+                <ul class="py-2 text-gray-700">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Category 1</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Category 2</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Category 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Project List -->
+        <div onclick="openModal('Project 1', 'Program 1', 'Skill Set 1', 'Beginner', 'Term 1', '3 Months', 'John Doe')" class="bg-white p-4 rounded shadow mb-4 cursor-pointer">
+            <h2 class="text-xl ">Project Title - Organization Name</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis turpis id risus tempor, vitae blandit dui aliquet.</p>
+        </div>
+
+        <div onclick="openModal('Project 2', 'Program 2', 'Skill Set 2', 'Intermediate', 'Term 2', '6 Months', 'Jane Smith')" class="bg-white p-4 rounded shadow mb-4 cursor-pointer">
+            <h2 class="text-xl ">Project Title - Organization Name</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis turpis id risus tempor, vitae blandit dui aliquet.</p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="fixed inset-0 hidden items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="bg-white p-6 rounded shadow-lg w-full max-w-7xl mx-auto h-3/4 overflow-y-auto flex flex-col">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold mb-4" id="modalTitle">Course Information</h2>
+                <span onclick="closeModal()" class="cursor-pointer text-gray-600 text-4xl">&times;</span>
+            </div>
+            <p id="modalContent" class="mb-6">Here is the detailed information about the course.</p>
+            <!-- Centered "I'm Interested" Button -->
+            <div class="mt-auto flex justify-center">
+                <button onclick="openConfirmationPopup()" class="bg-yellow-400 text-white font-semibold py-2 px-4 rounded">I'm Interested</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Popup (wider) -->
+    <div id="confirmationPopup" class="fixed inset-0 hidden items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="bg-white p-6 rounded shadow-lg w-full max-w-lg mx-auto text-center">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Your request has been sent for review</h2>
+                <span onclick="closeConfirmationPopup()" class="cursor-pointer text-gray-600 text-4xl">&times;</span>
+            </div>
+            <p>You expressed interest in one of the projects and it will be reviewed by the department of applied research.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal and Popup -->
+    <script>
+        function openModal(name, program, skills, level, Term, Duration, staff) {
+            // Set the modal content dynamically
+            document.getElementById("modalTitle").textContent = `${name} - ${program}`;
+            document.getElementById("modalContent").innerHTML = `
+                <strong>Course Summary:</strong><br> ${program}<br>
+                <strong>Skill Set:</strong><br> ${skills}<br>
+                <strong>Program:</strong><br> ${program}<br>
+                <strong>Term:</strong><br> ${Term}<br>  
+                <strong>Level:</strong><br> ${level}<br>
+                <strong>Duration:</strong><br> ${Duration}<br>
+                <strong>Staff:</strong><br> ${staff}
+            `;
+            // Show the modal
+            document.getElementById("infoModal").classList.remove("hidden");
+            document.getElementById("infoModal").classList.add("flex");
+        }
+
+        function closeModal() {
+            document.getElementById("infoModal").classList.add("hidden");
+            document.getElementById("infoModal").classList.remove("flex");
+        }
+
+        function openConfirmationPopup() {
+            // Show the confirmation popup
+            document.getElementById("confirmationPopup").classList.remove("hidden");
+            document.getElementById("confirmationPopup").classList.add("flex");
+            // Close the main modal
+            closeModal();
+        }
+
+        function closeConfirmationPopup() {
+            document.getElementById("confirmationPopup").classList.add("hidden");
+            document.getElementById("confirmationPopup").classList.remove("flex");
+        }
+
+        // Dropdown Toggle
+        document.querySelector('button').addEventListener('click', () => {
+            const dropdown = document.querySelector('.relative .absolute');
+            dropdown.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
