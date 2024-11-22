@@ -2,140 +2,218 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
-<body>
-    <!-- Register your Course Section -->
-    <div class="bg-[#00703C] mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <div class="bg-white mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <!-- Courses Heading -->
-            <div class="mb-6">
-                <h1 class="text-4xl font-bold mb-4">Courses</h1>
-                <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-green-700" />
-            </div>
+<body class="bg-gray-100">
 
-            <!-- Courses Table -->
-            <div class="overflow-x-auto">
-                <table class="min-w-full bg-white border border-gray-200">
-                    <thead>
-                        <tr class="bg-gray-100 border-b border-gray-200">
-                            <th class="px-6 py-3 text-left font-semibold text-gray-700">Name</th>
-                            <th class="px-6 py-3 text-left font-semibold text-gray-700">Program</th>
-                            <th class="px-6 py-3 text-left font-semibold text-gray-700">School/department</th>
-                            <th class="px-6 py-3 text-left font-semibold text-gray-700">Level</th>
-                            <th class="px-6 py-3 text-left font-semibold text-gray-700">Staff</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Example Row -->
-                        <tr class="border-b border-gray-200 cursor-pointer"
-                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
-                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
-                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
-                            <td class="px-6 py-4 text-gray-900">School/department</td>
-                            <td class="px-6 py-4 text-gray-900">4</td>
-                            <td class="px-6 py-4 text-gray-900">Staff</td>
-                        </tr>
-                        <!-- Duplicate rows for illustration -->
-                        <tr class="border-b border-gray-200 cursor-pointer"
-                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
-                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
-                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
-                            <td class="px-6 py-4 text-gray-900">School/department</td>
-                            <td class="px-6 py-4 text-gray-900">4</td>
-                            <td class="px-6 py-4 text-gray-900">Staff</td>
-                        </tr>
-                        <tr class="border-b border-gray-200 cursor-pointer"
-                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
-                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
-                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
-                            <td class="px-6 py-4 text-gray-900">School/department</td>
-                            <td class="px-6 py-4 text-gray-900">4</td>
-                            <td class="px-6 py-4 text-gray-900">Staff</td>
-                        </tr>
-                        <tr class="border-b border-gray-200 cursor-pointer"
-                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
-                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
-                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
-                            <td class="px-6 py-4 text-gray-900">School/department</td>
-                            <td class="px-6 py-4 text-gray-900">4</td>
-                            <td class="px-6 py-4 text-gray-900">Staff</td>
-                        </tr>
-                        <tr class="border-b border-gray-200 cursor-pointer"
-                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
-                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
-                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
-                            <td class="px-6 py-4 text-gray-900">School/department</td>
-                            <td class="px-6 py-4 text-gray-900">4</td>
-                            <td class="px-6 py-4 text-gray-900">Staff</td>
-                        </tr>
-                        <tr class="border-b border-gray-200 cursor-pointer"
-                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
-                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
-                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
-                            <td class="px-6 py-4 text-gray-900">School/department</td>
-                            <td class="px-6 py-4 text-gray-900">4</td>
-                            <td class="px-6 py-4 text-gray-900">Staff</td>
-                        </tr>
-                        <tr class="border-b border-gray-200 cursor-pointer"
-                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
-                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
-                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
-                            <td class="px-6 py-4 text-gray-900">School/department</td>
-                            <td class="px-6 py-4 text-gray-900">4</td>
-                            <td class="px-6 py-4 text-gray-900">Staff</td>
-                        </tr>
-                        <tr class="border-b border-gray-200 cursor-pointer"
-                            onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
-                            <td class="px-6 py-4 text-gray-900">MTM6404</td>
-                            <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
-                            <td class="px-6 py-4 text-gray-900">School/department</td>
-                            <td class="px-6 py-4 text-gray-900">4</td>
-                            <td class="px-6 py-4 text-gray-900">Staff</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <!-- Header Section -->
+    <header class="flex justify-between items-center bg-white px-4">
+        <div class="flex items-center">
+            <img src="/images/green-logo.svg" alt="PartnerSync Logo" class="h-10 w-auto sm:h-12 md:h-16 lg:h-20">
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="text-black text-xl">
+                <i class="fas fa-bell"></i>
+            </button>
+            <!-- Sign In Button (Visible on medium screens and up) -->
+            <button class="hidden md:inline bg-[#EAC117] text-white px-3 py-1 rounded" onclick="openSignInModal()">Sign
+                In</button>
+            <!-- Hamburger Menu Button -->
+            <button class="text-black px-3 py-1  md:hidden" onclick="toggleMobileMenu()"><i
+                    class="fas fa-bars text-lg"></i></button>
+        </div>
+    </header>
+
+    <!-- Overlay for the Mobile Menu -->
+    <div id="menuOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobileMenu"
+        class="fixed top-0 right-0 w-64 h-full bg-white p-6 z-50 transform translate-x-full transition-transform duration-300">
+        <button class="text-gray-700 text-xl mb-4" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
+        <ul class="space-y-3">
+            <li><a href="#" class="text-black"><span><i class="fas fa-home text-black"></i> Home</span></a>
+            </li>
+            <li><a href="#" class="text-black"><span><i class="fas fa-book text-black"></i> Courses</span>
+            </li>
+            <li><a href="#" class="text-gray-700"><span><i class="fas fa-project-diagram text-black"></i>
+                        External Projects</span></a></li>
+            <li><a href="#" class="text-black"><span><i class="fas fa-envelope text-black"></i>
+                        Inbox</span></a></li>
+            <li><a href="#" class="text-gray-700"><span><i class="fas fa-star text-black"></i> Expressed
+                        Interests</span></a></li>
+        </ul>
+        <button class="bg-[#EAC117] text-white px-4 py-2 rounded w-full mt-4">Sign In</button>
+    </nav>
+    <main class="p-6">
+        <!-- Dashboard Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <!-- Sidebar Navigation (Hidden on Mobile, Visible on Tablet and Up) -->
+            <aside class="bg-white p-6 rounded-lg text-center  lg:col-span-1 hidden md:block">
+                <div
+                    class="w-20 h-20 mx-auto rounded-full flex items-center justify-center text-white font-semibold text-4xl bg-green-700">
+                    SS
+                </div>
+                <p class="text-gray-600">Position</p>
+                <h3 class="text-lg font-bold">Sarah Smith</h3>
+                <div class="my-5 border-t-2 border-green-700 border-b-2 py-4">
+                    <ul class="space-y-3">
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-black"><span><i class="fas fa-home text-black"></i> Home</span></a>
+                            </li>
+                            <li><a href="#" class="text-black"><span><i class="fas fa-book text-black"></i> Courses</span>
+                            </li>
+                            <li><a href="#" class="text-gray-700"><span><i class="fas fa-project-diagram text-black"></i>
+                                        External Projects</span></a></li>
+                            <li><a href="#" class="text-black"><span><i class="fas fa-envelope text-black"></i>
+                                        Inbox</span></a></li>
+                            <li><a href="#" class="text-gray-700"><span><i class="fas fa-star text-black"></i> Expressed
+                                        Interests</span></a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </aside>
+            <!-- Register your Course Section -->
+            <div class="bg-green-700 p-6 rounded-lg lg:col-span-4">
+                <div class="bg-white mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                    <!-- Courses Heading -->
+                    <div class="mb-6">
+                        <h1 class="text-4xl font-bold mb-4">Courses</h1>
+                        <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-green-700" />
+                    </div>
+
+                    <!-- Courses Table -->
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead>
+                                <tr class="bg-gray-100 border-b border-gray-200">
+                                    <th class="px-6 py-3 text-left font-semibold text-gray-700">Name</th>
+                                    <th class="px-6 py-3 text-left font-semibold text-gray-700">Program</th>
+                                    <th class="px-6 py-3 text-left font-semibold text-gray-700">School/department</th>
+                                    <th class="px-6 py-3 text-left font-semibold text-gray-700">Level</th>
+                                    <th class="px-6 py-3 text-left font-semibold text-gray-700">Staff</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Example Row -->
+                                <tr class="border-b border-gray-200 cursor-pointer"
+                                    onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                                    <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                                    <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                                    <td class="px-6 py-4 text-gray-900">School/department</td>
+                                    <td class="px-6 py-4 text-gray-900">4</td>
+                                    <td class="px-6 py-4 text-gray-900">Staff</td>
+                                </tr>
+                                <!-- Duplicate rows for illustration -->
+                                <tr class="border-b border-gray-200 cursor-pointer"
+                                    onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                                    <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                                    <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                                    <td class="px-6 py-4 text-gray-900">School/department</td>
+                                    <td class="px-6 py-4 text-gray-900">4</td>
+                                    <td class="px-6 py-4 text-gray-900">Staff</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 cursor-pointer"
+                                    onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                                    <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                                    <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                                    <td class="px-6 py-4 text-gray-900">School/department</td>
+                                    <td class="px-6 py-4 text-gray-900">4</td>
+                                    <td class="px-6 py-4 text-gray-900">Staff</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 cursor-pointer"
+                                    onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                                    <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                                    <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                                    <td class="px-6 py-4 text-gray-900">School/department</td>
+                                    <td class="px-6 py-4 text-gray-900">4</td>
+                                    <td class="px-6 py-4 text-gray-900">Staff</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 cursor-pointer"
+                                    onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                                    <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                                    <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                                    <td class="px-6 py-4 text-gray-900">School/department</td>
+                                    <td class="px-6 py-4 text-gray-900">4</td>
+                                    <td class="px-6 py-4 text-gray-900">Staff</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 cursor-pointer"
+                                    onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                                    <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                                    <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                                    <td class="px-6 py-4 text-gray-900">School/department</td>
+                                    <td class="px-6 py-4 text-gray-900">4</td>
+                                    <td class="px-6 py-4 text-gray-900">Staff</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 cursor-pointer"
+                                    onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                                    <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                                    <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                                    <td class="px-6 py-4 text-gray-900">School/department</td>
+                                    <td class="px-6 py-4 text-gray-900">4</td>
+                                    <td class="px-6 py-4 text-gray-900">Staff</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 cursor-pointer"
+                                    onclick="openModal('MTM6404', 'Interactive Media Design', 'Skills','program','Term','2 Years' ,'Full Name')">
+                                    <td class="px-6 py-4 text-gray-900">MTM6404</td>
+                                    <td class="px-6 py-4 text-gray-900">Interactive Media Design</td>
+                                    <td class="px-6 py-4 text-gray-900">School/department</td>
+                                    <td class="px-6 py-4 text-gray-900">4</td>
+                                    <td class="px-6 py-4 text-gray-900">Staff</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="infoModal" class="fixed inset-0 hidden items-center justify-center bg-gray-900 bg-opacity-50">
-        <div class="bg-white p-6 rounded shadow-lg w-full max-w-7xl mx-auto h-3/4 overflow-y-auto">
-            <div class="flex justify-between items-center">
-                <h2 class="text-2xl font-bold mb-4" id="modalTitle">Course Information</h2>
-                <span onclick="closeModal()" class="cursor-pointer text-gray-600 text-4xl">&times;</span>
+        <!-- Modal -->
+        <div id="infoModal" class="fixed inset-0 hidden items-center justify-center bg-gray-900 bg-opacity-50">
+            <div class="bg-white p-6 rounded shadow-lg w-full max-w-7xl mx-auto h-3/4 overflow-y-auto">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-2xl font-bold mb-4" id="modalTitle">Course Information</h2>
+                    <span onclick="closeModal()" class="cursor-pointer text-gray-600 text-4xl">&times;</span>
+                </div>
+                <p id="modalContent">Here is the detailed information about the course.</p>
             </div>
-            <p id="modalContent">Here is the detailed information about the course.</p>
         </div>
-    </div>
-    <!-- JavaScript for Modal -->
-    <script>
-        function openModal(name, program, skills, level, Term, Duration, staff) {
-            // Set the modal content dynamically
-            document.getElementById("modalTitle").textContent = `${name} - ${program}`;
-            document.getElementById("modalContent").innerHTML = `
-                <strong>Course Summary:</strong><br> ${program}<br>
-                <strong>Skill Set:</strong><br> ${skills}<br>
-                <strong>Program:</strong><br> ${program}<br>
-                <strong>Term:</strong><br> ${Term}<br>  
-                <strong>Level:</strong><br> ${level}<br>
-                <strong>Duration:</strong><br> ${Duration}<br>
-                <strong>Staff:</strong><br> ${staff}
-            `;
-            // Show the modal
-            document.getElementById("infoModal").classList.remove("hidden");
-            document.getElementById("infoModal").classList.add("flex");
-        }
+    </main>
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-8">
+        <div class="footer-content max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 px-4">
+            <!-- Company and Legal Information -->
+            <div class="info-section flex flex-col md:flex-row gap-8">
+                <!-- Company Information -->
+                <div class="company-info">
+                    <h4 class="text-lg font-bold mb-2">Company</h4>
+                    <p><a href="https://www.algonquincollege.com/applied-research/"
+                            class="text-white hover:text-gray-400">About Applied Research</a></p>
+                    <p><a href="https://www.algonquincollege.com/" class="text-white hover:text-gray-400">Algonquin
+                            College</a></p>
+                </div>
 
-        function closeModal() {
-            document.getElementById("infoModal").classList.add("hidden");
-            document.getElementById("infoModal").classList.remove("flex");
-        }
-    </script>
+                <!-- Legal Information -->
+                <div class="legal-info mt-4 md:mt-0">
+                    <h4 class="text-lg font-bold mb-2">Legal</h4>
+                    <p><a href="#" class="text-white hover:text-gray-400">Terms of Service</a></p>
+                    <p><a href="#" class="text-white hover:text-gray-400">Privacy Policy</a></p>
+                </div>
+            </div>
+
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="/images/white_logo.svg" alt="PartnerSync Logo" class="h-16 w-auto">
+            </div>
+        </div>
+
+        <!-- Copyright Information -->
+        <p class="text-center mt-8">&copy; 2024 PartnerSync. All rights reserved.</p>
+    </footer>
+    <script src="../script.js"></script>
 </body>
 
 </html>
